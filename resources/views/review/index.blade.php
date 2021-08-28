@@ -44,7 +44,7 @@
                 <h4 class="card-title fw-bold">{{$review->title}}</h4>
                 <h5 class="card-title"> {{$review->author}}</h5>
                 <p class="card-text">{{$review->getPreview()}}</p>
-                <p class="card-text"><small class="text-muted">{{$review->creator}} {{$review->created_at->format('d/m/Y')}}</small></p>
+                <p class="card-text"><small class="text-muted">{{$review->user->name}} {{$review->created_at->format('d/m/Y')}}</small></p>
                 <button class="btn btn-sec d-flex mx-auto">
                   <a href="{{route('review.show', compact('review'))}}" class="text-light">
                   Dettagli

@@ -22,7 +22,7 @@
           <img src="{{Storage::url($review->img)}}" class="card-img-top" alt="{{$review->title}}">
           <div class="card-body">
             <p class="card-text">{{$review->description}}</p>
-            <p class="card-text fw-light">Aggiunto da {{$review->creator}} il
+            <p class="card-text fw-light">Aggiunto da {{$review->user->name}} il
               <span> {{$review->created_at->format('d/m/Y')}}</span>
             </p>
             <div class="card-buttons d-flex justify-content-around my-3">
