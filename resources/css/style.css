@@ -1,0 +1,159 @@
+:root {
+    --main: #8291f5;
+    --secondary: #36f5d4;
+    --third: #28b0fa;
+    --red: #e04c59;
+    --yellow: #e0d357;
+    --light: #f5fbf9;
+    --black: #010505;
+}
+body,
+html {
+    overflow-x: hidden;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: var(--third);
+}
+
+/* ----------- CUSTOM TEXTS -------------- */
+
+.text-sec {
+    color: var(--secondary);
+}
+
+.text-light {
+    color: var(--light);
+}
+
+.home-text {
+    font-size: 70px;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; */
+    /* text-shadow: 2px 0 3px #8291f5, 0 0 5px #36f5d4;*/
+    text-shadow: 5px 5px 4px var(--third);
+}
+
+@media only screen and (max-width: 480px) {
+    .home-text {
+        font-size: 40px;
+    }
+}
+
+.shadow-text {
+    text-shadow: 5px 5px 3px var(--third);
+}
+
+.text-grad {
+    background: linear-gradient(to right, var(--third), var(--light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ----------- CUSTOM BACKGROUNDS -------------- */
+
+.bg-main {
+    background-color: var(--main);
+}
+
+.bg-image {
+    min-height: 100vh;
+    background-image: url("/img/background.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.bg-color {
+    position: relative;
+    min-height: 100vh;
+}
+
+.bg-color::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(
+        90deg,
+        /* rgba(245, 251, 249, 1) 4%, */ rgba(40, 176, 250, 0.8) 35%,
+        rgba(54, 245, 212, 0.8) 56%
+    );
+}
+
+.reviews-box {
+    z-index: 1 !important;
+    position: relative;
+}
+/* ----------- CUSTOM BUTTONS -------------- */
+
+.btn {
+    color: var(--light);
+    border: none;
+}
+.btn-main {
+    background-color: var(--main);
+}
+.btn-sec {
+    background-color: var(--secondary);
+}
+.btn-third {
+    background-color: var(--third);
+}
+.btn-red {
+    background-color: var(--red);
+}
+.btn-yellow {
+    background-color: var(--yellow);
+}
+
+/*--------- HEADER -------- */
+
+.header-img {
+    width: 100%;
+}
+.header-title {
+    align-self: center;
+}
+
+.header-title h1 {
+    font-size: 4.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-title h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-title h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/*------------ NAVBAR ---------- */
+nav {
+    border-top: 2px solid var(--secondary);
+}
+
+.navbar-toggler {
+    border: 3px solid var(--secondary) !important;
+    /* background-color: var(--secondary); */
+}
+
+/*------------- CARD ------------ */
+/* .card {
+    height: 87%;
+} */
+
+/*------------ FOOTER ---------- */
+#footer {
+    height: 8vh;
+}
