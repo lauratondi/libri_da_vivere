@@ -22,9 +22,9 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews = Review::all();
+        // $reviews = Review::all();
         // Se voglio oridnarle in ordine descrescente di creazione
-        // $reviews = Review::orderBy('created_at', 'DESC')->get();
+        $reviews = Review::orderBy('created_at', 'DESC')->get();
 
         return view('review.index', compact('reviews'));
     }
@@ -54,7 +54,7 @@ class ReviewController extends Controller
             'author'=>$request->author,
             'description'=>$request->description,
             'img'=>$request->file('img')->store('public/img'),
-            'creator'=>Auth::user()->name
+            'user_id'=>Auth::user()->name
         ]);
 
         return redirect(route('review.index'))->with('message', 'La tua recensione é stata pubblicata');
