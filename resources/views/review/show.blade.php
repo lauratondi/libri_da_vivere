@@ -1,7 +1,7 @@
 <x-layout>
   
   <div class="container-fluid pt-5 pb-5 bg-color ">
-  
+    
     <div class="row reviews-box justify-content-center">
       
       {{-- CONFIRM REVIEW POSTED --}}
@@ -25,16 +25,21 @@
             <p class="card-text fw-light text-muted">Aggiunto da {{$review->user->name}} il
               <span> {{$review->created_at->format('d/m/Y')}}</span>
             </p>
-            @if($review->user->id == Auth::user()->id)
+
+            @if (!Auth::user())
+            @else
             <div class="card-buttons d-flex justify-content-around my-3">
+              @if($review->user->id === Auth::user()->id)
               <a href="{{route('review.edit', compact('review'))}}" class="btn btn-yellow"><i class="fas fa-edit"></i></a>
               <form action="{{route('review.delete', compact('review'))}}" method="POST">
                 @method('DELETE')
                 @csrf
                 <button class='btn btn-red'><i class="fas fa-trash-alt"></i></button>
               </form>
+              @endif
             </div>
             @endif
+            
           </div>
         </div>
       </div>
