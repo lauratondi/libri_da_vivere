@@ -78,8 +78,10 @@ class ReviewController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Review $review)
+    
     {
-        return view('review.edit', compact('review'));
+         return view('review.edit', compact('review'));
+    
     }
 
     /**

@@ -22,9 +22,10 @@
           <img src="{{Storage::url($review->img)}}" class="card-img-top" alt="{{$review->title}}">
           <div class="card-body">
             <p class="card-text">{{$review->description}}</p>
-            <p class="card-text fw-light">Aggiunto da {{$review->user->name}} il
+            <p class="card-text fw-light text-muted">Aggiunto da {{$review->user->name}} il
               <span> {{$review->created_at->format('d/m/Y')}}</span>
             </p>
+            @if($review->user->id == Auth::user()->id)
             <div class="card-buttons d-flex justify-content-around my-3">
               <a href="{{route('review.edit', compact('review'))}}" class="btn btn-yellow"><i class="fas fa-edit"></i></a>
               <form action="{{route('review.delete', compact('review'))}}" method="POST">
@@ -33,6 +34,7 @@
                 <button class='btn btn-red'><i class="fas fa-trash-alt"></i></button>
               </form>
             </div>
+            @endif
           </div>
         </div>
       </div>
