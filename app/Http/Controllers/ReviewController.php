@@ -47,8 +47,6 @@ class ReviewController extends Controller
      */
     public function store(ReviewRequest $request)
     {
-        // dd($request->all());
-
         $review= Review::create([
             'title'=>$request->title,
             'author'=>$request->author,
@@ -97,7 +95,6 @@ class ReviewController extends Controller
         $review->author= $request->author;
         $review->description=$request->description;
         $review->img=$request->file('img')->store('public/store');
-        // $review-> user_id=Auth::user()->name;
         $review->save();
 
         return redirect(route('review.show', compact('review')))->with('message', 'La tua recensione é stata modificata');
@@ -119,8 +116,7 @@ class ReviewController extends Controller
     public function creator(){
 
         $reviews = Auth::user()->reviews()->get(); 
-        // dd($reviews);
-
+        
         return view('review.mine', compact('reviews'));
     }
 }

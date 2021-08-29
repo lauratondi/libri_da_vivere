@@ -42,8 +42,8 @@
               <label  class="form-label">Autore</label>
               <input type="text" class="form-control" name="author" value="{{old('author')}}">
             </div>
-            <div class="mb-3 d-flex mx-auto">
-              <textarea name="description" cols="48" rows="20" placeholder="Scrivi qui la tua recensione">{{old('description')}}</textarea>
+            <div class="mb-3 d-flex ">
+              <textarea class='mx-auto' name="description" cols="48" rows="20" placeholder="Scrivi qui la tua recensione">{{old('description')}}</textarea>
             </div>
             <div class="mb-3 ">
               <input type="file" name="img"  class='d-flex mx-auto'>

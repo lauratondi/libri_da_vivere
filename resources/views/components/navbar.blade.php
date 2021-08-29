@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-main  px-3">
   <div class="container-fluid">
-    {{-- <a class="navbar-brand text-light" href="#">Navbar</a> --}}
+   
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="fas fa-ellipsis-h text-sec"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -22,12 +22,7 @@
           <a class="nav-link text-sec" href="{{route('login')}}">Login</a>
         </li>
         @else 
-        {{-- <li class="nav-item">
-          <a class="nav-link text-sec" href="{{route('login')}}">Logout</a>
-        </li>  --}}
-        {{-- <li class="nav-item ">
-          <a class="nav-link text-sec" href="{{route('review.create')}}">Scrivi Recensione</a>
-        </li> --}}
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-sec" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{Auth::user()->name}}

@@ -32,7 +32,7 @@
     
     <div class="row mt-5 reviews-box">
       @foreach ($reviews as $review)
-      <div class="col-12 col-md-4 d-flex justify-content-center">
+      <div class="col-12 col-lg-4 d-flex justify-content-center">
         
         <div class="card mb-3" style="max-width: 540px;" data-aos="zoom-in" data-aos-delay="100">
           <div class="row g-0">

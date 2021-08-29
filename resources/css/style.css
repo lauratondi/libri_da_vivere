@@ -32,9 +32,6 @@ a:hover {
 
 .home-text {
     font-size: 70px;
-    /* -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black; */
-    /* text-shadow: 2px 0 3px #8291f5, 0 0 5px #36f5d4;*/
     text-shadow: 5px 5px 4px var(--third);
 }
 
@@ -82,7 +79,7 @@ a:hover {
     left: 0;
     background: linear-gradient(
         90deg,
-        /* rgba(245, 251, 249, 1) 4%, */ rgba(40, 176, 250, 0.8) 35%,
+        rgba(40, 176, 250, 0.8) 35%,
         rgba(54, 245, 212, 0.8) 56%
     );
 }
@@ -148,10 +145,9 @@ nav {
     /* background-color: var(--secondary); */
 }
 
-/*------------- CARD ------------ */
-/* .card {
-    height: 87%;
-} */
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
 
 /*------------ FOOTER ---------- */
 #footer {
