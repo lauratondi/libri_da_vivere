@@ -18,7 +18,6 @@ class CreateReviewsTable extends Migration
             $table->string('title');
             $table->string('author');
             $table->text('description');
-            $table->text('creator');
             $table->string('img');
             $table->timestamps();
         });
