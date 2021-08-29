@@ -14,7 +14,7 @@ class AddUserIdColumnToReviewsTable extends Migration
     public function up()
     {
         Schema::table('reviews', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id')->after('img')->default(1);
+            $table->unsignedBigInteger('user_id')->after('img');
 
             $table->foreign('user_id')->references('id')->on('users');
         });
