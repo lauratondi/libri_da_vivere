@@ -54,7 +54,7 @@ class ReviewController extends Controller
             'author'=>$request->author,
             'description'=>$request->description,
             'img'=>$request->file('img')->store('public/img'),
-            'user_id'=>Auth::id()
+            'user_id'=>Auth::user()->id
         ]);
 
         return redirect(route('review.index'))->with('message', 'La tua recensione é stata pubblicata');
