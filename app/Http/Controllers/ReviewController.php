@@ -54,7 +54,7 @@ class ReviewController extends Controller
             'author'=>$request->author,
             'description'=>$request->description,
             'img'=>$request->file('img')->store('public/img'),
-            'user_id'=>Auth::user()->name
+            'user_id'=>Auth::user()->id
         ]);
 
         return redirect(route('review.index'))->with('message', 'La tua recensione é stata pubblicata');
@@ -95,7 +95,7 @@ class ReviewController extends Controller
         $review->author= $request->author;
         $review->description=$request->description;
         $review->img=$request->file('img')->store('public/store');
-        // $review->creator=$request->creator;
+        // $review-> user_id=Auth::user()->name;
         $review->save();
 
         return redirect(route('review.show', compact('review')))->with('message', 'La tua recensione é stata modificata');

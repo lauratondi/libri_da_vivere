@@ -14,6 +14,7 @@ class Review extends Model
         'author',
         'description',
         'img',
+        'user_id'
         
     ];
 
