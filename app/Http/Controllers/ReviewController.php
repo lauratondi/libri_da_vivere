@@ -22,9 +22,9 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        // $reviews = Review::all();
+        $reviews = Review::all();
         // Se voglio oridnarle in ordine descrescente di creazione
-        $reviews = Review::orderBy('created_at', 'DESC')->get();
+        // $reviews = Review::orderBy('created_at', 'DESC')->get();
 
         return view('review.index', compact('reviews'));
     }
