@@ -9,16 +9,25 @@
   </div>
   <div class="row justify-content-center mt-5">
     <div class="col-12 col-md-3">
+      @if ($errors->any())
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{$error}}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
       
       <form method="POST" action='{{route('register')}}'">
         @csrf
         <div class="mb-3">
           <label  class="form-label">Nome</label>
-          <input type="text" class="form-control" name="name" >
+          <input type="text" class="form-control" name="name" id="name" value="{{old('name')}}">
         </div>
         <div class="mb-3">
           <label  class="form-label">Email</label>
-          <input type="email" class="form-control" name="email" >
+          <input type="email" class="form-control" name="email" id="email" value={{old('email')}}>
         </div>
         <div class="mb-3">
           <label  class="form-label">Password</label>

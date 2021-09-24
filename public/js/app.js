@@ -3113,6 +3113,22 @@ function within(min, value, max) {
 
 __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
+__webpack_require__(/*! ./script.js */ "./resources/js/script.js");
+
+/***/ }),
+
+/***/ "./resources/js/script.js":
+/*!********************************!*\
+  !*** ./resources/js/script.js ***!
+  \********************************/
+/***/ (() => {
+
+// NAVBAR TOGGLER
+var toggler = document.querySelector(".navbar-toggler");
+toggler.addEventListener("click", function () {
+  toggler.classList.toggle("fa-rotate-90");
+});
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":

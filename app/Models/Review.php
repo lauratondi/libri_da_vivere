@@ -19,17 +19,22 @@ class Review extends Model
     ];
 
 
-    public function preview($sample){
+    public function preview($sample, $length){
         $sample= strip_tags($sample);
-        $sample=substr($sample, 0, 50);
+        $sample=substr($sample, 0, $length);
         $sample=$sample."...";
 
         return $sample;
     }
 
     public function getPreview(){
-        return $this->preview($this->description);
+        return $this->preview($this->description, 80);
     }
+
+    public function getTitle(){
+        return $this-> preview($this->title, 18);
+    }
+
 
     public function user(){
         return $this->belongsTo(User::class);

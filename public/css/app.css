@@ -10980,11 +10980,22 @@ a:hover {
     color: var(--light);
     border: none;
 }
+
 .btn-main {
     background-color: var(--main);
+    transition: 0.2s;
+}
+.btn-main:hover {
+    box-shadow: inset 2px 2px 2px var(--secondary);
+    color: var(--secondary);
 }
 .btn-sec {
     background-color: var(--secondary);
+    transition: 0.2s;
+}
+
+.btn-sec:hover {
+    box-shadow: inset 2px 2px 2px var(--third);
 }
 .btn-third {
     background-color: var(--third);
@@ -11035,6 +11046,10 @@ nav {
     box-shadow: none !important;
 }
 
+.dropdown-item:hover {
+    background-color: transparent;
+    color: #0a58ca;
+}
 /*------------ FOOTER ---------- */
 #footer {
     height: 8vh;
